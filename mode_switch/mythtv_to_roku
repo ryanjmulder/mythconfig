@@ -1,0 +1,4 @@
+#! /bin/bash
+irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_INPUT
+irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_CHANNELDOWN
+irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_ENTER

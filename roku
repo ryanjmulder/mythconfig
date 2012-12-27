@@ -1,0 +1,159 @@
+# ~/.lirc/roku
+# 
+# ROKU native LIRC config file for
+# the ATI-Wonder Remote
+# using lirc_ati_remote_wonder_rf driver
+# 
+
+# roku mode
+begin roku
+
+# menu button
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = menu
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_OPTION
+repeat = 0
+flags = quit
+end
+
+# stop button
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = stop
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_BACK
+flags = quit
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = right
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_RIGHT
+repeat = 6
+flags = quit
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = left
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_LEFT
+repeat = 6
+flags = quit
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = up
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_UP
+repeat = 6
+flags = quit
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = down
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_DOWN
+repeat = 6
+flags = quit
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = ok
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_OK
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = play
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_PLAYPAUSE
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = pause
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_PLAYPAUSE
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = check
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_HOME
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = rec
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_UNDO
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = rewind
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_REWIND
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = fforward
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_FASTFORWARD
+repeat = 0
+flags = quit
+end
+
+
+# return to mythtv mode
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = tv
+config = /etc/lircrc/mode_switch/roku_to_mythtv
+flags = mode|quit 
+repeat = 0
+end
+
+
+end roku
+
+
+# change to roku mode
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = dvd
+mode = roku
+config = /etc/lircrc/mode_switch/mythtv_to_roku
+repeat = 0
+end

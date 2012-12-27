@@ -1,0 +1,42 @@
+# ~/.lirc/heyu
+# 
+# native LIRC config file for
+# the ATI-Wonder Remote
+# using lirc_ati_remote_wonder_rf driver
+# 
+
+# brighten light
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = chup
+config = ssh 192.168.1.149 /usr/local/bin/heyu bright B2 10
+repeat = 0
+end
+
+# dim light
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = chdown
+config = ssh 192.168.1.149 /usr/local/bin/heyu dim B2 10
+repeat = 0
+end
+
+# light off
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = book
+config = ssh 192.168.1.149 /usr/local/bin/heyu off B2 &
+repeat = 0
+end
+
+# light on
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = hand
+config = ssh 192.168.1.149 /usr/local/bin/heyu on B2 &
+repeat = 0
+end
