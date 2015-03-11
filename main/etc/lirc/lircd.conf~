@@ -1,0 +1,23 @@
+#This configuration has been automatically generated via
+#the Ubuntu LIRC package maintainer scripts.
+#
+#It includes the default configuration for the remote and/or
+#transmitter that you have selected during package installation.
+#
+#Feel free to add any custom remotes to the configuration
+#via additional include directives or below the existing
+#Ubuntu include directives from your selected remote and/or
+#transmitter.
+
+include "/etc/lirc/mulderirblasters.conf"
+
+include "/etc/lirc/roku.conf"
+
+#Configuration for the ATI/NVidia/X10 RF Remote (userspace) remote:
+#include "/usr/share/lirc/remotes/atiusb/lircd.conf.atilibusb"
+include "/etc/lirc/ati_remote_wonder_rf.code7.conf"
+
+#Configuration for the Serial Port (UART) : Direct TV Receiver transmitter:
+#include "/usr/share/lirc/extras/transmitters/directtv/general.conf"
+
+

@@ -1,0 +1,91 @@
+
+# Please make this file available to others
+# by sending it to <lirc@bartelmus.de>
+#
+# this config file was automatically generated
+# using lirc-0.9.0(atilibusb) on Sun Dec 23 16:32:36 2012
+#
+# contributed by 
+#
+# brand:                       ati_remote_wonder_rf
+# model no. of remote control: 
+# devices being controlled by this remote:
+#
+
+begin remote
+
+  name  ati_remote_wonder_rf
+  bits           16
+  eps            30
+  aeps          100
+
+  one             0     0
+  zero            0     0
+  pre_data_bits   8
+  pre_data       0x14
+  post_data_bits  16
+  post_data      0x0
+  gap          39989
+  min_repeat      29
+#  suppress_repeat 29
+#  uncomment to suppress unwanted repeats
+  toggle_bit_mask 0x30D0000
+
+      begin codes
+          0                        0x4C17
+          1                        0x420D
+          2                        0x430E
+          3                        0x440F
+          4                        0x4510
+          5                        0x4611
+          6                        0x4712
+          7                        0x4813
+          8                        0x4914
+          9                        0x4A15
+          volup                    0x3D08
+          voldown                  0x3E09
+          mute                     0x3F0A
+          chup                     0x400B
+          chdown                   0x410C
+          mouse_up                 0xA772
+          mouse_down               0xA873
+          mouse_left               0xA570
+          mouse_right              0xA671
+          mouse_up_right           0xAA75
+          mouse_down_right         0xAB76
+          mouse_up_left            0xA974
+          mouse_down_left          0xAC77
+          right_click              0xB17C
+          left_click               0xAD78
+          hand                     0x3C07
+          book                     0x3B06
+          ?                        0x3A05
+          dvd                      0x3904
+          tv                       0x3803
+          a                        0x3500
+          b                        0x3601
+          power                    0x3702
+          stop                     0x5D28
+          pause                    0x5E29
+          fforward                 0x5B26
+          rec                      0x5C27
+          rewind                   0x5924
+          play                     0x5A25
+          d                        0x501B
+          c                        0x4E19
+          e                        0x5621
+          f                        0x5823
+          right                    0x541F
+          left                     0x521D
+          up                       0x4F1A
+          down                     0x5722
+          ok                       0x531E
+          timer                    0x511C
+          shrink_resize            0x5520
+          menu                     0x4B16
+          check                    0x4D18
+      end codes
+
+end remote
+
+
