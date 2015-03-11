@@ -1,0 +1,87 @@
+# /etc/lircrc/tc
+# 
+# MythTV native LIRC config file for
+# the ATI-Wonder Remote
+# using lirc_atiusb driver
+# 
+
+#tv power
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = power
+config = irsend --device=/var/run/lirc/lircd1 set_transmitters 3 && irsend --device=/var/run/lirc/lircd1 --count 2 SEND_ONCE haier KEY_POWER
+repeat = 0
+end
+
+#tv volume up
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = volup
+config = irsend --device=/var/run/lirc/lircd1 set_transmitters 3 && irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_VOLUMEUP
+repeat = 5
+end
+
+#tv volume down
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = voldown
+config = irsend --device=/var/run/lirc/lircd1 set_transmitters 3 && irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_VOLUMEDOWN
+repeat = 5
+end
+
+#tv mute
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = mute
+config = irsend --device=/var/run/lirc/lircd1 set_transmitters 3 && irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_MUTE
+repeat = 0
+end
+
+#tv video source
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = ?
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_INPUT
+end
+
+#tv menu down
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = mouse_down
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_CHANNELDOWN
+repeat = 5
+end
+
+#tv menu up
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = mouse_up
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_CHANNELUP
+repeat = 5
+end
+
+#tv menu exit
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = right_click
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_EXIT
+repeat = 0
+end
+
+#tv menu enter
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = left_click
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE haier KEY_ENTER
+repeat = 0
+end
+
