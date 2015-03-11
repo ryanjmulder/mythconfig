@@ -1,0 +1,265 @@
+# ~/.mythtv/lircrc
+# 
+# MythTV native LIRC config file for
+# the ATI-Wonder Remote
+# using lirc_ati_remote_wonder_rf driver
+# 
+
+# all remote buttons wakeup display
+begin
+   prog = irexec
+   button = *
+   config = /home/rmulder/kick_dpms &
+end
+
+# kill mythtv
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = a
+button = a
+config = /home/rmulder/kill_progs
+end
+
+# start mythtv
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = b
+button = b
+config = /home/rmulder/start_mythfrontend &
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = stop
+config = /home/rmulder/kill_helpers &
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = c
+config = /
+end
+
+# incremental search
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = shrink_resize
+config = Ctrl+S
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = check
+config = I
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = menu
+config = M
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = stop
+config = Esc
+repeat = 0
+end
+
+# next commercial break
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = fforward
+config = End
+repeat = 0
+end
+
+# previous commercial break
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = rewind
+config = Home
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = pause
+config = P
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = play
+config = P
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = f
+config = PgDown
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = d
+config = D
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = e
+config = PgUp
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = right
+config = Right
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = left
+config = Left
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = up
+config = Up
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = down
+config = Down
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = ok
+config = Return
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 1
+config = 1
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 2
+config = 2
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 3
+config = 3
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 4
+config = 4
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 5
+config = 5
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 6
+config = 6
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 7
+config = 7
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 8
+config = 8
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 9
+config = 9
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 0
+config = 0
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = rec
+config = R
+repeat = 0
+end 

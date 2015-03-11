@@ -1,0 +1,104 @@
+# ~/.lirc/tv
+# 
+# native LIRC config file for
+# the ATI-Wonder Remote
+# using lirc_ati_remote_wonder_rf driver
+# 
+
+#tv power
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = power
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 power
+repeat = 0
+end
+
+#tv video source
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = ?
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 source
+end
+
+#tv menu down
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = mouse_down
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 down
+repeat = 5
+end
+
+#tv menu up
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = mouse_up
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 up
+repeat = 5
+end
+
+#tv menu left
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = mouse_left
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 left
+repeat = 5
+end
+
+#tv menu right
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = mouse_right
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 right
+repeat = 5
+end
+
+#tv menu exit
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = right_click
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 exit
+repeat = 0
+end
+
+#tv menu enter
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = left_click
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 middle
+repeat = 0
+end
+
+#tv mute
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = mute
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 mute
+repeat = 0
+end
+
+#tv vol-
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = voldown
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 vol- &
+repeat = 5
+end
+
+#tv vol+
+begin
+##remote = ati_remote_wonder_rf
+prog = irexec
+button = volup
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 vol+ &
+repeat = 5
+end

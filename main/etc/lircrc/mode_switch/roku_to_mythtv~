@@ -1,0 +1,6 @@
+#! /bin/bash
+irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 source
+sleep .1
+irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 up
+sleep .1
+irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 middle

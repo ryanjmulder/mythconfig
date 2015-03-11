@@ -1,0 +1,1852 @@
+# ~/.mythtv/lircrc
+# 
+# MythTV native LIRC config file for
+# the ATI-Wonder Remote
+# using lirc_ati_remote_wonder_rf driver
+# 
+
+# apple tv mode
+begin roku
+
+# menu button
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = menu
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_OPTION
+repeat = 0
+flags = quit
+end
+
+# stop button
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = stop
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_BACK
+flags = quit
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = right
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_RIGHT
+repeat = 5
+flags = quit
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = left
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_LEFT
+repeat = 5
+flags = quit
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = up
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_UP
+repeat = 5
+flags = quit
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = down
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_DOWN
+repeat = 5
+flags = quit
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = ok
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_OK
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = play
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_PLAYPAUSE
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = pause
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_PLAYPAUSE
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = check
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_HOME
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = rec
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_UNDO
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = rewind
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_REWIND
+repeat = 0
+flags = quit
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = fforward
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE roku KEY_FASTFORWARD
+repeat = 0
+flags = quit
+end
+
+
+# return to mythtv mode
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = tv
+flags = mode|quit 
+repeat = 0
+end
+
+
+end roku
+
+
+# change to roku mode
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = dvd
+mode = roku
+repeat = 0
+end
+
+
+# all remote buttons wakeup display
+begin
+   prog = irexec
+   button = *
+   config = /home/rmulder/kick_dpms &
+end
+
+#tv power
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = power
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 power
+repeat = 0
+end
+
+#tv video source
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = ?
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 source
+end
+
+#tv menu down
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = mouse_down
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 down
+repeat = 5
+end
+
+#tv menu up
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = mouse_up
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 up
+repeat = 5
+end
+
+#tv menu left
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = mouse_left
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 left
+repeat = 5
+end
+
+#tv menu right
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = mouse_right
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 right
+repeat = 5
+end
+
+#tv menu exit
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = right_click
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 exit
+repeat = 0
+end
+
+#tv menu enter
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = left_click
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 middle
+repeat = 0
+end
+
+#tv mute
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = mute
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 mute
+repeat = 0
+end
+
+#tv vol-
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = voldown
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 vol- &
+repeat = 5
+end
+
+#tv vol+
+begin
+##remote = ati_remote_wonder_rf
+prog = irexec
+button = volup
+config = irsend --device=/var/run/lirc/lircd1 SEND_ONCE samsung630 vol+ &
+repeat = 5
+end
+
+
+# brighten light
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = chup
+config = ssh 192.168.1.149 /usr/local/bin/heyu bright B2 10
+repeat = 0
+end
+
+# dim light
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = chdown
+config = ssh 192.168.1.149 /usr/local/bin/heyu dim B2 10
+repeat = 0
+end
+
+# light off
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = book
+config = ssh 192.168.1.149 /usr/local/bin/heyu off B2 &
+repeat = 0
+end
+
+# light on
+begin
+#remote = ati_remote_wonder_rf
+prog = irexec
+button = hand
+config = ssh 192.168.1.149 /usr/local/bin/heyu on B2 &
+repeat = 0
+end
+
+#eject/retract dvd
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = xxxxxx
+config = eject &
+config = eject -t &
+repeat = 0
+end
+
+#retract dvd
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = xxxxx
+config = eject -t &
+repeat = 0
+end
+
+# restart mtd
+#begin 
+#prog = irexec
+#button = leftmouse
+#config =
+#repeat = 3
+#end
+
+# kill mythtv
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = a
+button = a
+config = /home/rmulder/kill_progs
+end
+
+#jump to tv
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = TV_On_Demand
+config = F6
+repeat = 0
+end
+
+# start mythtv
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = b
+button = b
+config = /home/rmulder/start_mythfrontend &
+end
+
+
+# start boxee
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = c
+config = /
+end
+
+
+# incremental search
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = shrink_resize
+config = Ctrl+S
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = xxxxxxxxxxxxxxxxx
+config = F3
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = xxxxxxxxxxxxxxxx
+config = ?
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = check
+config = I
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = menu
+config = M
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = stop
+config = Esc
+repeat = 0
+end
+
+# previous channel
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = xxxxxxxxx
+config = H
+repeat = 0
+end
+
+# next commercial break
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = fforward
+config = End
+repeat = 0
+end
+
+# previous commercial break
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = rewind
+config = Home
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = pause
+config = P
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = play
+config = P
+repeat = 0
+end
+
+#begin
+#prog = mythtv
+#button = mute
+#config = |
+#repeat = 3
+#end
+
+#begin
+#prog = mythtv
+#button = vol-down
+#config = [
+#repeat = 1
+#end
+
+#begin
+#prog = mythtv
+#button = vol-up
+#config = ]
+#repeat = 1
+#end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = f
+config = PgDown
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = d
+config = D
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = e
+config = PgUp
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = xxxxxxxxxxxxxxxx
+config = Z
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = right
+config = Right
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = left
+config = Left
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = up
+config = Up
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = down
+config = Down
+repeat = 5
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = ok
+config = Return
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 1
+config = 1
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 2
+config = 2
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 3
+config = 3
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 4
+config = 4
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 5
+config = 5
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 6
+config = 6
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 7
+config = 7
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 8
+config = 8
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 9
+config = 9
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = 0
+config = 0
+repeat = 0
+end
+
+begin
+remote = ati_remote_wonder_rf
+prog = mythtv
+button = rec
+config = R
+repeat = 0
+end 
+
+#begin
+#prog = mythtv
+#button = leftmouse
+#config = Enter
+#repeat = 3
+#end
+
+
+##
+# xine key bindings.
+# Automatically generated by xine-ui version 0.99.3.
+##
+
+# start playback
+begin
+	remote = ati_remote_wonder_rf
+	button = play
+	prog   = xine
+	repeat = 0
+	config = Play
+end
+
+# playback pause toggle
+begin
+	remote = ati_remote_wonder_rf
+	button = pause
+	prog   = xine
+	repeat = 0
+	config = Pause
+end
+
+# stop playback
+begin
+	remote = ati_remote_wonder_rf
+	button = stop
+	prog   = xine
+	repeat = 0
+	config = Stop
+end
+
+# take a snapshot
+begin
+	remote = ati_remote_wonder_rf
+	button = rec
+	prog   = xine
+	repeat = 0
+	config = Snapshot
+end
+
+# eject the current medium
+begin
+	remote = ati_remote_wonder_rf
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = Eject
+end
+
+# stop playback after played stream
+#begin
+#	remote = ati_remote_wonder_rf
+#	button = stop
+#	prog   = xine
+#	repeat = 0
+#	config = playlistStop
+#end
+
+# scan playlist to grab stream infos
+#begin
+#	remote = ati_remote_wonder_rf
+#	button = info
+#	prog   = xine
+#	repeat = 0
+#	config = ScanplaylistInfo
+#end
+
+# set position to -60 seconds in current stream
+begin
+	remote = ati_remote_wonder_rf
+        button = E
+	prog   = xine
+	repeat = 3
+	config = SeekRelative-60
+end
+
+# set position to +60 seconds in current stream
+begin
+	remote = ati_remote_wonder_rf
+        button = F
+	prog   = xine
+	repeat = 3
+	config = SeekRelative+60
+end
+
+# set position to -30 seconds in current stream
+begin
+        remote = ati_remote_wonder_rf
+	button = left
+	prog   = xine
+	repeat = 3
+	config = SeekRelative-7
+end
+
+# set position to +30 seconds in current stream
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = right
+	prog   = xine
+	repeat = 3
+	config = SeekRelative+30
+end
+
+# set position to -7 seconds in current stream
+begin
+	remote = ati_remote_wonder_rf
+	button = 1
+	prog   = xine
+	repeat = 3
+	config = SeekRelative-7
+end
+
+# set position to +7 seconds in current stream
+begin
+	remote = ati_remote_wonder_rf
+	button = 3
+	prog   = xine
+	repeat = 3
+	config = SeekRelative+7
+end
+
+# set position to beginning of current stream
+begin
+	remote = ati_remote_wonder_rf
+	button = 2
+	prog   = xine
+	repeat = 0
+	config = SetPosition0%
+end
+
+# set position to 30% of current stream
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = 5
+	prog   = xine
+	repeat = 0
+	config = SetPosition30%
+end
+
+# set position to 60% of current stream
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = 8
+	prog   = xine
+	repeat = 0
+	config = SetPosition60%
+end
+
+# set position to 90% of current stream
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = 0
+	prog   = xine
+	repeat = 0
+	config = SetPosition90%
+end
+
+
+
+# jump to media Menu
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = menu
+	prog   = xine
+	repeat = 0
+	config = RootMenu
+end
+
+# jump to Title Menu
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = TitleMenu
+end
+
+# jump to Root Menu
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = RootMenu
+end
+
+# jump to Subpicture Menu
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SubpictureMenu
+end
+
+# jump to Audio Menu
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = AudioMenu
+end
+
+# jump to Angle Menu
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = AngleMenu
+end
+
+# jump to Part Menu
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = PartMenu
+end
+
+# menu navigate up
+begin
+	remote = ati_remote_wonder_rf
+	button = upxxxxxxxxx
+	prog   = xine
+	repeat = 3
+	config = EventUp
+end
+
+# menu navigate down
+begin
+	remote = ati_remote_wonder_rf
+	button = Arrow_Downxxxxxxxxxx
+	prog   = xine
+	repeat = 3
+	config = EventDown
+end
+
+# menu navigate left
+begin
+	remote = ati_remote_wonder_rf
+	button = leftxxxxxxx
+	prog   = xine
+	repeat = 3
+	config = EventLeft
+end
+
+# menu navigate right
+begin
+	remote = ati_remote_wonder_rf
+	button = rightxxxxxxxx
+	prog   = xine
+	repeat = 3
+	config = EventRight
+end
+
+# menu select
+begin
+	remote = ati_remote_wonder_rf
+	button = ok
+	prog   = xine
+	repeat = 0
+	config = EventSelect
+end
+
+# menu navigate up
+begin
+	remote = scott-dvd
+	button = UP
+	prog   = xine
+	repeat = 0
+	config = EventUp
+end
+
+# menu navigate down
+begin
+	remote = scott-dvd
+	button = DOWN
+	prog   = xine
+	repeat = 0
+	config = EventDown
+end
+
+# menu navigate left
+begin
+	remote = scott-dvd
+	button = LEFT
+	prog   = xine
+	repeat = 0
+	config = EventLeft
+end
+
+# menu navigate right
+begin
+	remote = scott-dvd
+	button = RIGHT
+	prog   = xine
+	repeat = 0
+	config = EventRight
+end
+
+# menu select
+begin
+	remote = scott-dvd
+	button = ENTER
+	prog   = xine
+	repeat = 0
+	config = EventSelect
+end
+
+# jump to next chapter
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = Next
+	prog   = xine
+	repeat = 0
+	config = EventNext
+end
+
+# jump to previous chapter
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = Prev
+	prog   = xine
+	repeat = 0
+	config = EventPrior
+end
+
+# select next angle
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = EventAngleNext
+end
+
+# select previous angle
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = EventAnglePrior
+end
+
+# visibility toggle of help window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = HelpShow
+end
+
+# visibility toggle of video post effect window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = VPProcessShow
+end
+
+# toggle post effect usage
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = VPProcessEnable
+end
+
+# visibility toggle of output window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = ToggleWindowVisibility
+end
+
+# bordered window toggle of output window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = ToggleWindowBorder
+end
+
+# visibility toggle of UI windows
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = ToggleVisibility
+end
+
+# visibility toggle of control window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = ControlShow
+end
+
+# visibility toggle of mrl browser window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = MrlBrowser
+end
+
+# visibility toggle of playlist editor window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = PlaylistEditor
+end
+
+# visibility toggle of the setup window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SetupShow
+end
+
+# visibility toggle of the event sender window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = EventSenderShow
+end
+
+# visibility toggle of analog TV window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = TVAnalogShow
+end
+
+# visibility toggle of log viewer
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = ViewlogShow
+end
+
+# visibility toggle of stream info window
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = StreamInfosShow
+end
+
+# display stream information using OSD
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = check
+	prog   = xine
+	repeat = 0
+	config = OSDStreamInfos
+end
+
+# enter key binding editor
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = KeyBindingEditor
+end
+
+# open file selector
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = FileSelector
+end
+
+# select a subtitle file
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SubSelector
+end
+
+# download a skin from the skin server
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SkinDownload
+end
+
+# display MRL/Ident toggle
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = MrlIdentToggle
+end
+
+# grab pointer toggle
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = GrabPointer
+end
+
+# add 10 to the next entered number
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = Number10add
+end
+
+# set position in current stream to numeric percentage
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SetPosition%
+end
+
+# set position forward by numeric argument in current stream
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SeekRelative+
+end
+
+# set position back by numeric argument in current stream
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SeekRelative-
+end
+
+# change audio video syncing (delay video)
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = AudioVideoDecay+
+end
+
+# change audio video syncing (delay audio)
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = AudioVideoDecay-
+end
+
+# reset audio video syncing offset
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = AudioVideoDecayReset
+end
+
+# change subtitle syncing (delay video)
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SpuVideoDecay+
+end
+
+# change subtitle syncing (delay subtitles)
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SpuVideoDecay-
+end
+
+# reset subtitle syncing offset
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SpuVideoDecayReset
+end
+
+# toggle TV modes (on the DXR3)
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = ToggleTVmode
+end
+
+# switch Monitor to DPMS standby mode
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = DPMSStandby
+end
+
+# increase hue by 10
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = HueControl+
+end
+
+# decrease hue by 10
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = HueControl-
+end
+
+# increase saturation by 10
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SaturationControl+
+end
+
+# decrease saturation by 10
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = SaturationControl-
+end
+
+# increase brightness by 10
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = BrightnessControl+
+end
+
+# decrease brightness by 10
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = BrightnessControl-
+end
+
+# increase contrast by 10
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = ContrastControl+
+end
+
+# decrease contrast by 10
+begin
+	
+	button = xxxxx
+	prog   = xine
+	repeat = 0
+	config = ContrastControl-
+end
+
+# quit the program
+begin
+	
+	remote = ati_remote_wonder_rf
+	button = stop
+	prog   = xine
+	repeat = 0
+	config = Quit
+end
+
+##
+# End of xine key bindings.
+##
+
+##
+# Mplayer key bindings
+##
+begin
+#     remote = ati_remote_wonder_rf
+     button = pause
+     prog = mplayer
+     config = osd\nosd\npause
+     config = osd\nosd
+end
+begin
+#     remote = ati_remote_wonder_rf
+     button = playx
+     prog = mplayer
+     config = osd\nosd\n
+end
+begin
+#     remote = ati_remote_wonder_rf
+     button = Next
+     prog = mplayer
+     config = seek_chapter +1
+     repeat = 3
+end
+begin
+     remote = ati_remote_wonder_rf
+     button = Prev
+     prog = mplayer
+     config = seek_chapter -1
+     repeat = 3
+end
+begin
+#     remote = ati_remote_wonder_rf
+     button = left
+     prog = mplayer
+     config = seek -5
+     repeat = 3
+end
+begin
+#     remote = ati_remote_wonder_rf
+     button = right
+     prog = mplayer
+     config = seek 30
+     repeat = 3
+end
+begin
+     button = E
+     prog = mplayer
+     config = seek -600
+     repeat = 3
+end
+begin
+     button = F
+     prog = mplayer
+     config = seek 600
+     repeat = 3
+end
+
+begin
+    button = stop
+    prog = mplayer
+    config = get_time_pos
+end
+
+begin
+    button = stop
+    prog = mplayer
+    config = get_filename
+end
+
+begin
+    button = stop
+    prog = mplayer
+    config = quit
+end
+
+#osd
+begin
+#        remote = ati_remote_wonder_rf
+	button = check
+	prog   = mplayer
+	repeat = 0
+	config = osd\nosd
+end
+begin
+     button = xxxxx
+     prog = mplayer
+     config = audio_delay +0.1
+end
+begin
+     button = xxxxx
+     prog = mplayer
+     config = audio_delay -0.1
+end
+
+
+#up                       
+begin
+ prog = mplayer
+ button = 2
+ config = dvdnav up 
+end
+
+#down                       
+begin
+ prog = mplayer
+ button = 8
+ config = dvdnav down
+end
+
+#left                       
+begin
+ prog = mplayer
+ button = 4
+ config = dvdnav left
+end
+
+#right                       
+begin
+ prog = mplayer
+ button = 6
+ config = dvdnav right
+end
+
+#select
+begin
+ prog = mplayer
+ button = 5
+ config = dvdnav select
+end
+
+
+#select
+begin
+ prog = mplayer
+ button = ok
+ config = dvdnav select
+end
+
+
+#menu
+begin
+ prog = mplayer
+ button = menu
+ config = dvdnav menu
+end
+
+
+
+
+begin
+     remote = ati_remote_wonder_rf
+     button = stop
+     prog = fceu
+     config = Esc
+end
+
+#play
+begin
+ prog = vlc
+ button = play
+ config = key-play
+end
+
+#pause
+begin
+ prog = vlc
+ button = pause
+ config = key-pause
+end
+
+#save position
+begin
+ prog = vlc
+ button = stopxxxxxxxxxxxxxxxxxxxxxxxxxx
+ config = key-set-bookmark1
+end
+
+#stop
+begin
+ prog = vlc
+ button = stop
+ config = key-quit
+end
+
+#info
+begin
+ prog = vlc
+ button = check
+ config = key-position
+end
+
+#back
+begin
+ prog = vlc
+ button = left
+ config = key-jump-extrashort
+ repeat = 3
+end
+
+#forward                  
+begin
+ prog = vlc
+ button = right
+ config = key-jump+short
+ repeat = 3
+end
+
+#long forward
+begin
+ prog = vlc
+ button = F
+ config = key-jump+long
+ repeat = 3
+end
+
+#long backward
+begin
+ prog = vlc
+ button = E
+ config = key-jump-long
+ repeat = 3
+end
+
+#up                       
+begin
+ prog = vlc
+ button = 2
+ config = key-nav-up
+end
+
+#down                       
+begin
+ prog = vlc
+ button = 8
+ config = key-nav-down
+end
+
+#left                       
+begin
+ prog = vlc
+ button = 4
+ config = key-nav-left
+end
+
+#right                       
+begin
+ prog = vlc
+ button = 6
+ config = key-nav-right
+end
+
+#select
+begin
+ prog = vlc
+ button = 5
+ config = key-nav-activate
+end
+
+
+#select
+begin
+ prog = vlc
+ button = ok
+ config = key-nav-activate
+end
+
+
+#menu
+begin
+ prog = vlc
+ button = menu
+ config = key-disc-menu
+end
+
+#previous chapter
+begin
+ prog = vlc
+ button = Prev
+ config = key-chapter-prev
+end
+
+#next chapter
+begin
+ prog = vlc
+ button = Next
+ config = key-chapter-next
+end
+
+# unzoom
+begin
+ prog = vlc
+ button = Arrow_Downxxxxxxxxxxxxxxxxxx
+ config = key-unzoom
+end
+
+# zoom
+begin
+ prog = vlc
+ button = upxxxxxxxxxxxxxxxxxxx
+ config = key-zoom
+end
+
+
+#previous title
+begin
+ prog = vlc
+ button = 7
+ config = key-title-prev
+end
+
+#next title
+begin
+ prog = vlc
+ button = 9
+ config = key-title-next
+end
+
+
+#cycle crop
+begin
+ prog = vlc
+ button = 0
+ config = key-crop
+end
+
+#play bookmark
+begin
+ prog = vlc
+ button = Dxxxxxxxxxxxxxxxxxxxxxx
+ config = key-play-bookmark1
+end
+
+
+#take snapshhot
+begin
+ prog = vlc
+ button = rec
+ config = key-snapshot
+end
+
+
+begin
+remote = ati_remote_wonder_rf
+prog = irexec
+button = stop
+config = /home/rmulder/kill_helpers &
+repeat = 0
+end
+
+begin
+    prog = irxevent
+    button = play
+    config = Key space Your
+    repeat = 0
+    delay = 0
+end
+
+begin
+    prog = irxevent
+    button = menu
+    config = Key Escape Your
+    config = Key SHIFT-l Your
+    repeat = 0
+    delay = 0
+end
+
+begin
+    prog = irexec
+    button = stop
+    config = /home/rmulder/avod/kill_amazon_on_demand
+    repeat = 0
+    delay = 0
+end
+
+begin
+    prog = irxevent
+    button = right
+    config = Key Right Your
+    repeat = 3
+    delay = 0
+end
+
+begin
+    prog = irxevent
+    button = left
+    config = Key Left Your
+    repeat = 3
+    delay = 0
+end
+
+begin
+    prog = irxevent
+    button = up
+    config = Key Up Your
+    repeat = 3
+    delay = 0
+end
+
+begin
+    prog = irxevent
+    button = Arrow_Down
+    config = Key Down Your
+    repeat = 0
+    delay = 0
+end
+
+begin
+    prog = irxevent
+    button = pause
+    config = Key space Your
+    repeat = 0
+    delay = 0
+end
+
+begin
+    prog = irxevent
+    button = ok
+    config = Key Return Your
+    repeat = 0
+    delay = 0
+end
+
+begin
+    prog = irexec
+    button = Maximize
+    config = /home/rmulder/avod/fullscreen
+    repeat = 0
+    delay = 0
+end
+
+begin
+    prog = irexec
+    button = check
+    config = /home/rmulder/avod/info_on
+    config = /home/rmulder/avod/info_off
+    repeat = 0
+    delay = 0
+end
+
+begin
+    prog = irxevent
+    button = TV_On_Demand
+	config = Key Tab Your
+    repeat = 0
+    delay = 0
+end
+
+begin
+    prog = irxevent
+    button = F
+	config = Key Page_Down Your
+    repeat = 3
+    delay = 0
+end
+
+begin
+    prog = irxevent
+    button = E
+	config = Key Page_Up Your
+    repeat = 3
+    delay = 0
+end
+
