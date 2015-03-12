@@ -1,0 +1,3 @@
+#! /bin/sh
+
+HOME=/home/rmulder DISPLAY=:0 setuid rmulder xterm -e setuid rmulder /usr/bin/mythfrontend -v none

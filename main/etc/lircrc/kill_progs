@@ -1,0 +1,2 @@
+killall mythfrontend.real -9 &
+./kill_helpers

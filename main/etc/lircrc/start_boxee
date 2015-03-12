@@ -1,0 +1,2 @@
+#! /bin/sh
+HOME=/home/rrmulder DISPLAY=:0 setuid rrmulder xterm -e /opt/boxee/Boxee --lircdev /var/run/lirc/lircd

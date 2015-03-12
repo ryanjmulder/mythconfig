@@ -1,0 +1,7 @@
+#! /bin/bash
+/home/rmulder/mplayer_subtitles_off &
+#/home/rmulder/mplayer_resume -stop-xscreensaver -geometry 1920x1080+0+0 -fs -zoom -noautosub "$@"
+#if [ $? -ne 0 ]; then
+ mplayer -stop-xscreensaver -geometry 1920x1080+0+0 -fs -zoom -noautosub "$@"
+#fi
+

@@ -1,0 +1,3 @@
+irsend --device=/dev/lircd1 SEND_ONCE apextv power
+sleep 1
+irsend --device=/dev/lircd1 SEND_ONCE apextv video
