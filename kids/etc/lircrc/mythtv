@@ -9,7 +9,7 @@
 begin
    prog = irexec
    button = *
-   config = /home/rmulder/kick_dpms &
+   config = /etc/lircrc/kick_dpms &
 end
 
 # kill mythtv
@@ -18,7 +18,7 @@ remote = ati_remote_wonder_rf
 prog = irexec
 button = a
 button = a
-config = /home/rmulder/kill_progs
+config = /etc/lircrc/kill_progs
 end
 
 # start mythtv
@@ -27,14 +27,14 @@ remote = ati_remote_wonder_rf
 prog = irexec
 button = b
 button = b
-config = /home/rmulder/start_mythfrontend &
+config = /etc/lircrc/start_mythfrontend &
 end
 
 #begin
 #remote = ati_remote_wonder_rf
 #prog = irexec
 #button = stop
-#config = /home/rmulder/kill_helpers &
+#config = /etc/lircrc/kill_helpers &
 #repeat = 0
 #end
 
