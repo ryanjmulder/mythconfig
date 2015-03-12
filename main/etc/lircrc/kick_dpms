@@ -1,0 +1,19 @@
+ #!/bin/bash
+ 
+ # adjust these if needed
+ export DISPLAY=:0
+ #export XAUTHORITY=/home/$(ls -l /dev/console|awk '{print $3}')/.Xauthority
+ #export PATH=${PATH):/usr/X11R6/bin
+ 
+ DpmsStatus=$(xset -q | grep "DPMS is" | awk '{print $3}')
+ MonitorStatus=$(xset -q | grep "Monitor is" | awk '{print $3}')
+ if [ "${MonitorStatus}" = "Off" ]
+   then
+   xset dpms force on
+ fi
+ if [ "${DpmsStatus}" = "Enabled" ]
+   then
+   # press-any-key should work to wake up, but just in case:
+   xset +dpms dpms 0 0 3600
+ fi
+

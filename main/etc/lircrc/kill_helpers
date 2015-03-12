@@ -1,0 +1,4 @@
+sleep 1
+killall vlc -9 &
+killall xine -9 &
+killall mplayer -9 &

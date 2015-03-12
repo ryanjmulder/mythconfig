@@ -1,0 +1,3 @@
+vlc --intf=dummy "$@"
+#wmctrl -r "mythfrontend.real" -b add,below; vlc -f -video-on-top dvd://
+#vlc://quit; wmctrl -r "mythfrontend.real" -b remove,below

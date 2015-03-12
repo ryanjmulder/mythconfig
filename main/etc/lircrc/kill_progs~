@@ -1,0 +1,3 @@
+killall mythfrontend.real -9 &
+killall Boxee -9 &
+./kill_helpers
