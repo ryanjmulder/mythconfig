@@ -183,6 +183,7 @@ case "$1" in
 				if [ -S "$TRANSMITTER_SOCKET" -a "$OLD_SOCKET" != "$TRANSMITTER_SOCKET" ]; then
 					rm -f $OLD_SOCKET && ln -s $TRANSMITTER_SOCKET $OLD_SOCKET
 				fi 
+                                irsend --device=$TRANSMITTER_SOCKET set_transmitters 1 2 3 4
 			else
 				log_end_msg 1
 			fi
