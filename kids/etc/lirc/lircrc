@@ -1,6 +1,6 @@
 #Custom lircrc generated via mythbuntu-lirc-generator
 #All application specific lircrc files are within /etc/lircrc
-include /etc/lircrc/roku
+#include /etc/lircrc/roku
 include /etc/lircrc/tv
 include /etc/lircrc/mythtv 
 include /etc/lircrc/mplayer 
