@@ -1,0 +1,2 @@
+#!/bin/bash
+find "$1" -maxdepth 3 -type f -exec perl process_video.pl /shared/vidoes {} \;
